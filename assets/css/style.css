@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Epilogue', sans-serif;
+    list-style: none;
+}
+
+:root {
+    --white: hsl(0, 0%, 98%);
+    --Gray: hsl(0, 0%, 41%);
+    --Black: hsl(0, 0%, 8%);
+}
+
+body {
+    background-color: var(--white);
+}
+
+.header-container {
+    max-width: 1400px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 3%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header .menu-icon {
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40em;
+    position: relative;
+
+}
+
+/* .dp-menu {
+    display: none;
+    position: fixed;
+    background: rgb(255, 255, 255);
+} */
+
+nav .menu-list {
+    list-style: none;
+}
+
+nav .menu-list .close-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: none;
+}
+
+nav.active .menu-list {
+    transform: translateX(0);
+}
+
+nav .menu-list li {
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+}
+
+nav .menu-list a {
+    color: hsl(0, 0%, 8%);
+    text-decoration: none;
+    transition: all 0.2s;
+
+}
+
+.sub-menu {
+    display: none;
+}
+
+.dp-menu-company {
+    display: none;
+}
+
+
+nav ul li:hover .sub-menu {
+    display: block;
+    position: absolute;
+    background: rgb(255, 255, 255);
+}
+
+nav ul li:hover .sub-menu li {
+    display: block;
+    width: 150px;
+    text-align: center;
+    transition: 0.7s;
+    font-size: 15px;
+}
+
+nav ul li:hover .sub-menu li img {
+    position: relative;
+    right: 10px;
+}
+
+nav ul li:hover .sub-menu {
+    display: block;
+    position: absolute;
+    background: rgb(255, 255, 255);
+}
+
+nav ul li:hover .sub-menu li {
+    display: block;
+    width: 150px;
+    text-align: center;
+    transition: 0.7s;
+    font-size: 15px;
+}
+
+
+
+nav .menu-list a:hover {
+    font-weight: bold;
+}
+
+.buttons {
+    font-size: 20px;
+}
+
+#login {
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 20px;
+
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+#login:hover {
+    font-weight: bold;
+}
+
+#register {
+    width: 100px;
+    height: 4vh;
+
+    text-align: center;
+    background-color: transparent;
+    border-radius: 10px 10px 10px 10px;
+
+    cursor: pointer;
+}
+
+#register:hover {
+    font-weight: bold;
+}
+
+/* main-------------------------- */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+
+.left-container h1 {
+    color: var(--Black);
+    font-size: 90px;
+    font-weight: 700;
+    margin-bottom: 1em;
+
+}
+
+.left-container p {
+    color: hsl(0, 0%, 41%);
+    margin-bottom: 5em;
+}
+
+.left-container #learn-more {
+    width: 130px;
+    height: 4vh;
+    color: var(--white);
+    font-weight: bold;
+
+    text-align: center;
+    background-color: var(--Black);
+    border-radius: 10px 10px 10px 10px;
+
+    cursor: pointer;
+    margin-bottom: 5em;
+
+}
+
+.left-container #learn-more:hover {
+    background-color: transparent;
+    color: hsl(0, 0%, 8%);
+    font-weight: bold;
+}
+
+
+
+.image-hero {
+    max-width: 400px;
+    max-height: 550px;
+    width: auto;
+    height: auto;
+}
+
+.buttons-footer {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+
+    nav .menu-list .close-icon,
+    header .menu-icon {
+        display: block;
+    }
+
+    nav .menu-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+        background-color: hsl(0, 0%, 98%);
+    }
+
+    nav .menu-list li {
+        font-size: 30px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .image-hero {
+        width: 100%;
+        margin: 50px;
+        margin: 10px;
+    }
+
+    .left-container h1 {
+        color: var(--Black);
+        font-size: 50px;
+        font-weight: 700;
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+    }
+
+    .buttons-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 1445px) {
+    header nav {
+        gap: 5em;
+    }
+
+    .menu-list .buttons {
+        display: block;
+    }
+}
